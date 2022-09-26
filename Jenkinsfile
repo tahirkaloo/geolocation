@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     triggers {
-    pollSCM('')
+  pollSCM '* * * * *'
 }
     tools {
     maven 'M2_HOME'
