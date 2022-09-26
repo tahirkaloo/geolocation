@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('maven package') {
             steps {
-                sh 'mvn clean'
+        sh 'mvn clean'
 		sh 'mvn install'
 		sh 'mvn package'
             }
@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Docker') {
             steps {
-                echo 'Image steps'
+                echo 'Image step'
             }
         }
     }
