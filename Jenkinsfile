@@ -32,10 +32,10 @@ pipeline {
             }
         }
         stage('Deploy image') {
-            steps {
+            steps{
                 script{ 
                     docker.withRegistry("https://"+registry,"ecr:us-east-1:"+registryCredential) {
-                        dockerImage.push()
+                        dockerImage.push(docker push 241364083407.dkr.ecr.us-east-1.amazonaws.com/devops-repository:latest)
                     }
                 }
             }
