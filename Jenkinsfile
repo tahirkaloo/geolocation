@@ -1,13 +1,10 @@
 pipeline {
-   triggers {
-  pollSCM('* * * * *')
-    }
     agent any
     tools{
         maven 'M2_HOME'
     }
     environment {
-    registry = '241364083407.dkr.ecr.us-east-1.amazonaws.com/devops-repository'
+    registry = '241364083407.dkr.ecr.us-east-1.amazonaws.com/jenkins'
     registryCredential = 'jenkins-ecr'
     dockerimage = ''
   }
